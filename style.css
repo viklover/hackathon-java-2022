@@ -81,9 +81,9 @@ td, th {
     padding: 8px;
 }
 
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
+/*tr:nth-child(even) {*/
+/*    background-color: #dddddd;*/
+/*}*/
 /*Таблица закончилась*/
 
 /*Кнопки для таблицы*/
@@ -126,7 +126,7 @@ tr:nth-child(even) {
     width: 100%;
     max-width: 290px;
     height: 60px;
-    background: #1bbc9b;
+    background: #adf2e4;
     color: #fff;
     font-size: 1.125rem;
     font-weight: 700;
@@ -143,5 +143,13 @@ tr:nth-child(even) {
     cursor: pointer;
     margin: 0 auto;
 }
-
 /*Стили закончились*/
+
+/*footer*/
+
+.footer_p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 37px;
+    text-align: center;
+}

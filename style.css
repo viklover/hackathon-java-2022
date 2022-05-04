@@ -1,13 +1,147 @@
+@font-face {
+    font-family: "Montserrat-VariableFont_wght";
+    src: url("Montserrat-VariableFont_wght.ttf");
+}
+
 body {
     margin: 0;
-}
-.footer {
-
+    font-family: "Montserrat-VariableFont_wght";
 }
 
 .header {
-    background-color: black;
-    color: white;
     width: 100%;
     height: max-content;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
 }
+
+.header img {
+    width: 146px;
+    height: 81px;
+}
+
+.content {
+    background: #FFFFFF;
+    box-shadow: 0 4px 5px 20px rgba(144, 103, 198, 0.17);
+}
+
+.footer {
+
+}
+/*Классы кнопки в header*/
+.description_header {
+    font-weight: 700;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin: 0 500px 0 44px;
+}
+
+.bn31 {
+    border-radius: 9px;
+    color: white;
+    height: 50px;
+    font-size: 1.4em;
+    padding: 4px;
+    text-decoration: none;
+    width: 199px;
+}
+
+.bn31:hover {
+    color: #fff;
+    background: linear-gradient(5deg, #9067C6, #9067C6, #000000, #000000);
+}
+
+.bn31 .bn31span {
+    align-items: center;
+    background: #0e0e10;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+}
+
+.bn31:hover .bn31span {
+    background: transparent;
+}
+/*Стили закончились*/
+
+/*Таблица началась*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/*Таблица закончилась*/
+
+/*Кнопки для таблицы*/
+
+.input__wrapper {
+    width: 100%;
+    position: relative;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.input__file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.input__file-icon-wrapper {
+    height: 60px;
+    width: 60px;
+    margin-right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-right: 1px solid #fff;
+}
+
+.input__file-button-text {
+    line-height: 1;
+    margin-top: 1px;
+}
+
+.input__file-button {
+    width: 100%;
+    max-width: 290px;
+    height: 60px;
+    background: #1bbc9b;
+    color: #fff;
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/*Стили закончились*/

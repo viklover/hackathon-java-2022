@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Montserrat-VariableFont_wght";
+    src: url("Montserrat-VariableFont_wght.ttf");
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #C2CACD;
+    font-family: "Montserrat-VariableFont_wght";
+    height: 100%;
+    width: 100%;
+}
+.header {
+    margin: auto;
+    padding: 0;
+
+}
+.content{
+    display: block;
+    margin: auto;
+    width: 75%;
+height: 150%;
+    background-color: white;
+    box-shadow: 0px 4px 5px 20px rgba(144, 103, 198, 0.17);
+}
+.logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 13%;
+    margin-right: 0px;
+}
+.name {
+    margin: 0px;
+padding-top: 20px ;
+padding-left: 290px;
+padding-right: 50px;
+}
+h1 {
+    margin-bottom: 10px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+table.iksweb{
+	width: 90%;
+	border-collapse:collapse;
+	border-spacing:0;
+	height: auto;
+}
+table.iksweb,table.iksweb td, table.iksweb th {
+	border: 1px solid #595959;
+}
+table.iksweb td,table.iksweb th {
+	padding: 3px;
+	width: 30px;
+	height: 35px;
+}
+table.iksweb th {
+	background: #347c99; 
+	color: #fff; 
+	font-weight: normal;
+}
+
+
+
+
+
+  .bn32 {
+    background-image: linear-gradient(to right, #92ddec 0%, #c28de69d 100%);
+    border-radius: 40px;
+    box-sizing: border-box;
+    color: #000000;
+    display: block;
+    height: 50px;
+    font-size: 1.1em;
+    padding: 4px;
+    margin-top: 7px;
+    position: relative;
+    text-decoration: none;
+    width: 15em;
+    z-index: 2;
+  }
+  
+  .bn32:hover {
+    color: #fff;
+  }
+  
+  .bn32 .bn32span {
+    align-items: center;
+    background: #ffffff;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
+  }
+  
+  .bn32:hover .bn32span {
+    background: transparent;
+  }
+.iks {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 45px;
+    margin-right: 0px;
+}

@@ -7,6 +7,7 @@ body {
     margin: 0;
     font-family: "Montserrat-VariableFont_wght";
     background: #C2CACD;
+    overflow-y: scroll;
 }
 
 .header {
@@ -31,9 +32,9 @@ body {
 
 .content {
     width: 1002px;
-    background: #FFFFFF;
+    background: rgb(224, 212, 241);
     box-shadow: 0 4px 5px 20px rgba(144, 103, 198, 0.17);
-    height: max-content;
+    height: ma;
     margin: auto;
 }
 
@@ -70,7 +71,7 @@ body {
     /* height: 40px; */
     margin: auto 0;
     color: black;
-    background-image: linear-gradient(to right, #0f96b1 0%, #c28de69d 100%); 
+    background-image: linear-gradient(to right, #92ddec 0%, #c28de69d 100%); 
     /* border-radius: 12px; */
     transition: 0.5s ease;
     border-radius: 40px; 
@@ -84,8 +85,9 @@ body {
     /* width: 7em;  */
 }
 
-tr {
-
+.load-file {
+    cursor: pointer;
+    background-image: linear-gradient(to right, #7bbbc8 0%, #a478c29d 100%); 
 }
 
 .bn31:hover {
@@ -93,7 +95,11 @@ tr {
     /* background: linear-gradient(5deg, #9067C6, #9067C6, #000000, #000000); */
 
     /* (ниже мое) */
-    background-image: linear-gradient(to right, #0f96b1 0%, #c28de69d 100%); 
+    background-image: linear-gradient(to right, #92ddec 0%, #c28de69d 100%); 
+}
+
+.load-file:hover {
+    background-image: linear-gradient(to right, #7bbbc8 0%, #a478c29d 100%); 
 }
 
 .bn31 .bn31span {
@@ -131,11 +137,42 @@ tr {
     justify-content: space-between;
     padding: 20px;
     border: 5px solid rgb(181, 161, 210);;
+    cursor: pointer;
+    transition: 0.5s ease;
+    background-image: linear-gradient(to right, #92ddec 0%, #c28de69d 100%); 
+    box-sizing: border-box; 
+}
+
+.file-type-name {
+    z-index: 1;
+}
+
+.file-type-bn {
+    z-index: 1;
+}
+
+.white-block {
+    position: absolute;
+    margin: -20.5px;
+    background-color: white;
+    height: 60px;
+    width: 992.5px;
+    transition: 0.5s ease;
+    z-index: 0;
+}
+
+.file-type:hover {
+    color: white;
+}
+
+.file-type:hover .white-block {
+    background: transparent;
 }
 
 .file-type .file-type-bn {
     height: max-content;
     cursor: pointer;
+    transition: 0.1s ease;
 }
 
 .file-type .file-type-bn svg {
@@ -147,33 +184,41 @@ tr {
 
 .file-type .file-type-bn svg path {
     fill: rgb(195, 175, 222);
-    transition: 0.1s ease;
+    transition: 0.5s ease;
 }
 
-.file-type .file-type-bn:hover svg path {
+.file-type:hover .file-type-bn svg path {
     fill: rgb(155, 138, 178);
+}
+
+.file-type .rotated {
+    transform: rotate(3.142rad);
+    margin-right: 2px;
 }
 
 /*Таблица началась*/
 table {
+    margin: auto;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 95%;
 }
 
 table tr {
+    background-color: white;
     border-bottom: 3px solid rgb(195, 175, 222);
     border-left: 3px solid rgb(195, 175, 222);
     border-right: 3px solid rgb(195, 175, 222);
 }
 
 table tr .sort-cat {
+    cursor: default;
     padding: 4px;
     border: 3px solid rgb(195, 175, 222);
 }
 
 table tr .sort-filenames {
-    width: 440px;
+    width: 380px;
 }
 
 table tr .sort-author {
@@ -181,7 +226,7 @@ table tr .sort-author {
 }
 
 table tr .sort-editdate {
-    width: 150px;
+    width: 155px;
 }
 
 table tr td .sort-content {
@@ -215,6 +260,7 @@ table tr td .sort-content .sort-bn:hover svg path {
     margin: auto;
     width: 161px;
     font-family: "Montserrat-VariableFont_wght";
+    background-image: linear-gradient(to right, #92ddec 0%, #c28de69d 100%); 
 }
 
 td, th {
@@ -222,16 +268,25 @@ td, th {
     padding: 8px;
 }
 
-.sort-cat
+
 
 /*tr:nth-child(even) {*/
 /*    background-color: #dddddd;*/
 /*}*/
+
+table {
+    display: none;
+}
+
+.visible {
+    display: table;
+}
+
 /*Таблица закончилась*/
 
 /*Кнопки для таблицы*/
 
-.input__wrapper {
+.sort-cat .input__wrapper {
     width: 100%;
     position: relative;
     margin: 15px 0;

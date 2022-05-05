@@ -214,6 +214,7 @@ td, th {
     opacity: 0;
     visibility: hidden;
     position: absolute;
+    width: 160px;
 }
 
 .input__file-icon-wrapper {

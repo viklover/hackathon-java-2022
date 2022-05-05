@@ -37,6 +37,9 @@ xhr.onload = function() {
         let elementTable = document.createElement('table');
         elementTable.innerHTML = `
         <tr class="sort">
+            <td class="sort-cat sort-check-status">
+                <div class="status-check-true"></div>
+            </td>
             <td class="sort-cat sort-filenames"><div class="sort-content">
                 <div class="text">Имя</div>
                 <div class="sort-bn">
@@ -92,6 +95,7 @@ xhr.onload = function() {
                 let doc_name = doc.name
                 let doc_author = doc.author
                 let doc_was_updated = doc.was_updated
+                let doc_checked = doc.checked
                 var date = new Date(doc_was_updated);
                 doc_was_updated = ('0' + date.getDate()).slice(-2) + '.' + ('0' + (date.getMonth() + 1)).slice(-2) + '.' + date.getFullYear() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
 
@@ -99,18 +103,21 @@ xhr.onload = function() {
             
                 let elementTr = document.createElement('tr');
                 elementTr.innerHTML = `
+                <td class="sort-cat sort-check-status">
+                    <div class="status-check-${doc_checked}"></div>
+                </td>
                 <td>
                    <div class="name_file">
                        ${doc_name}
                    </div>
                 </td>
                 <td>
-                    <div class="name_author_1">
+                    <div class="name_author">
                         ${doc_author}
                     </div>
                 </td>
                 <td>
-                    <div class="data_1">
+                    <div class="data">
                         ${doc_was_updated}
                     </div>
                 </td>

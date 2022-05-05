@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: "Montserrat-VariableFont_wght";
-    background: #C2CACD;
+    background: #E5E5E5;
 }
 
 .header {
@@ -16,12 +16,17 @@ body {
     display: flex;
     flex-direction: row;
     margin-bottom: 21px;
+    
+    /* (ниже мое) */
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 30px;
 }
 
 .header img {
     width: 146px;
     height: 81px;
-    margin-left: 294px;
+    /* margin-left: 294px; */
 }
 
 .content {
@@ -41,17 +46,42 @@ body {
     font-size: 24px;
     display: flex;
     align-items: center;
-    margin: 0 0 0 42px;
+    /* margin: 0 0 0 42px; */
+
+    /* (ниже мое) */
+    margin: 0 0;
+    text-align: center;
+    height: auto;
+    cursor: default;
 }
 
 .bn31 {
-    border-radius: 9px;
-    color: white;
-    font-size: 1.4em;
+    /* border-radius: 9px; */
+    /* color: white; */
+    /* font-size: 1.4em; */
     padding: 4px;
     text-decoration: none;
-    width: 246px;
-    margin-left: 52px;
+    /* width: 246px; */
+    /* margin-left: 52px; */
+
+    /* (ниже мое) */
+    width: 141px;
+    font-size: 14px;
+    /* height: 40px; */
+    margin: auto 0;
+    color: black;
+    background-image: linear-gradient(to right, #0f96b1 0%, #c28de69d 100%); 
+    /* border-radius: 12px; */
+    transition: 0.5s ease;
+    border-radius: 40px; 
+    box-sizing: border-box; 
+    display: block; 
+    height: 50px; 
+    /* font-size: 1.4em;  */
+    /* padding: 4px;  */
+    position: relative; 
+    text-decoration: none; 
+    /* width: 7em;  */
 }
 
 tr {
@@ -60,18 +90,34 @@ tr {
 
 .bn31:hover {
     color: #fff;
-    background: linear-gradient(5deg, #9067C6, #9067C6, #000000, #000000);
+    /* background: linear-gradient(5deg, #9067C6, #9067C6, #000000, #000000); */
+
+    /* (ниже мое) */
+    background-image: linear-gradient(to right, #0f96b1 0%, #c28de69d 100%); 
 }
 
 .bn31 .bn31span {
     align-items: center;
-    background: #0e0e10;
+    /* background: #0e0e10; */
     border-radius: 9px;
     display: flex;
     justify-content: center;
     height: 100%;
-    transition: background 0.5s ease;
+    /* transition: background 0.5s ease; */
     width: 100%;
+    
+    /* (ниже мое) */
+    background: white;
+    transition: 0.1s ease;
+    font-weight: bold;
+    align-items: center; 
+    /* background: #0e0e10;  */
+    border-radius: 40px; 
+    display: flex; 
+    justify-content: center; 
+    height: 100%; 
+    transition: background 0.5s ease; 
+    width: 100%; 
 }
 
 .bn31:hover .bn31span {
@@ -86,10 +132,68 @@ table {
     width: 100%;
 }
 
+table tr {
+    border-bottom: 3px solid rgb(195, 175, 222);
+    border-left: 3px solid rgb(195, 175, 222);
+    border-right: 3px solid rgb(195, 175, 222);
+}
+
+table tr .sort-cat {
+    padding: 4px;
+    border: 3px solid rgb(195, 175, 222);
+}
+
+table tr .sort-filenames {
+    width: 440px;
+}
+
+table tr .sort-author {
+    width: 200px;
+}
+
+table tr .sort-editdate {
+    width: 150px;
+}
+
+table tr td .sort-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+table tr td .sort-content .sort-bn {
+    height: max-content;
+    cursor: pointer;
+}
+
+table tr td .sort-content .sort-bn svg {
+    padding-top: 2px;
+    margin-bottom: -2px;
+    padding-right: 2px;
+    margin-left: -2px;
+}
+
+table tr td .sort-content .sort-bn svg path {
+    fill: rgb(195, 175, 222);
+    transition: 0.1s ease;
+}
+
+table tr td .sort-content .sort-bn:hover svg path {
+    fill: rgb(155, 138, 178);
+}
+
+.open-file {
+    margin: auto;
+    width: 161px;
+    font-family: "Montserrat-VariableFont_wght";
+}
+
 td, th {
     text-align: left;
     padding: 8px;
 }
+
+.sort-cat
 
 /*tr:nth-child(even) {*/
 /*    background-color: #dddddd;*/
@@ -106,6 +210,7 @@ td, th {
 }
 
 .input__file {
+    height: 50px;
     opacity: 0;
     visibility: hidden;
     position: absolute;

@@ -33,7 +33,7 @@ body {
     width: 1002px;
     background: #FFFFFF;
     box-shadow: 0 4px 5px 20px rgba(144, 103, 198, 0.17);
-    height: 650px;
+    height: max-content;
     margin: auto;
 }
 
@@ -124,6 +124,35 @@ tr {
     background: transparent;
 }
 /*Стили закончились*/
+
+.file-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    border: 5px solid rgb(181, 161, 210);;
+}
+
+.file-type .file-type-bn {
+    height: max-content;
+    cursor: pointer;
+}
+
+.file-type .file-type-bn svg {
+    padding-top: 2px;
+    margin-bottom: -2px;
+    padding-right: 2px;
+    margin-left: -2px;
+}
+
+.file-type .file-type-bn svg path {
+    fill: rgb(195, 175, 222);
+    transition: 0.1s ease;
+}
+
+.file-type .file-type-bn:hover svg path {
+    fill: rgb(155, 138, 178);
+}
 
 /*Таблица началась*/
 table {

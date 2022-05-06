@@ -125,7 +125,7 @@ xhr.onload = function() {
                 <td>
                     <div class="input__wrapper">
 
-                        <a class="bn31 open-file" href="/edit_page" data-id="${doc_id}">
+                        <a class="bn31 open-file" href="./edit_page" data-id="${doc_id}">
                             <span class="bn31span">Открыть документ</span>
                         </a>
                     </div>

@@ -47,29 +47,35 @@ xhr3.onload = function() {
     let save_btn = document.querySelector(".savebtn");
     
     save_btn.onclick = function() {
-        let xhr4 = new XMLHttpRequest();
-    
-        xhr4.open('POST', 'http://10.3.4.224:8080/', true);
-    
-        let table_content2 = document.querySelector("tbody")
-        let data = {};
-    
-        let fields = document.querySelectorAll(".one")
-        let fields_content = table_content2.querySelectorAll("input")
-        for (let i = 0; i < fields.length; i++) {
-            data[Object.keys(responseDoc.document.fields)[i]] = fields_content[i].value
-        } 
-    
-        let set_document_fields = {
-            request: "set_document_fields", 
-            id: getCookie("id_doc"),
-            author: document.getElementById("name").value,
-            checked: document.getElementById("check").checked,
-            fields: data
+        
+        if (document.getElementById("name").value != "") {
+
+            let xhr4 = new XMLHttpRequest();
+        
+            xhr4.open('POST', 'http://10.3.4.224:8080/', true);
+        
+            let table_content2 = document.querySelector("tbody")
+            let data = {};
+        
+            let fields = document.querySelectorAll(".one")
+            let fields_content = table_content2.querySelectorAll("input")
+            for (let i = 0; i < fields.length; i++) {
+                data[Object.keys(responseDoc.document.fields)[i]] = fields_content[i].value
+            } 
+        
+            let set_document_fields = {
+                request: "set_document_fields", 
+                id: getCookie("id_doc"),
+                author: document.getElementById("name").value,
+                checked: document.getElementById("check").checked,
+                fields: data
+            }
+        
+            xhr4.send(JSON.stringify(set_document_fields));
+            location.reload();
+        } else {
+            alert("Введите имя")
         }
-    
-        xhr4.send(JSON.stringify(set_document_fields));
-        location.reload();
     }
 }
 

@@ -23,4 +23,4 @@ function eraseCookie(name) {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
 
-console.log(getCookie("openDoc"))
+console.log(getCookie("id_doc"))

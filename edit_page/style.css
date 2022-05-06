@@ -54,10 +54,30 @@ body{
     width: 146px;
 }
 .name {	
-    margin: auto;
+    margin: auto 0;
 }
 h1 {
     margin: 0;
+}
+.versions {
+    padding: 0 40px 50px 40px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(7, 1fr);
+}
+.verBtn {
+    height: 20px;
+    width: max-content;
+    border-radius: 40px;
+    background-color: rgba(144, 103, 198, 0.17);
+}
+.verBtn:hover {
+    background-color: rgba(144, 103, 198, 0.3);;
+}
+.verBtnContent {
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
 }
 table.iksweb{
 	width: 90%;

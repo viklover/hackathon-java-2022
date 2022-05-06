@@ -96,6 +96,7 @@ xhr.onload = function() {
                 let doc_author = doc.author
                 let doc_was_updated = doc.was_updated
                 let doc_checked = doc.checked
+                let doc_id = doc.id
                 var date = new Date(doc_was_updated);
                 doc_was_updated = ('0' + date.getDate()).slice(-2) + '.' + ('0' + (date.getMonth() + 1)).slice(-2) + '.' + date.getFullYear() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
 
@@ -124,7 +125,7 @@ xhr.onload = function() {
                 <td>
                     <div class="input__wrapper">
 
-                        <a class="bn31 open-file" href="#">
+                        <a class="bn31 open-file" href="#" data-id="${doc_id}">
                             <span class="bn31span">Открыть документ</span>
                         </a>
                     </div>
@@ -132,6 +133,7 @@ xhr.onload = function() {
                 `
                 
                 table.append(elementTr);
+                page_init()
             }
         }
 

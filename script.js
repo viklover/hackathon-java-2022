@@ -16,5 +16,16 @@ function page_init() {
         
         switch_table(switch_list[i], i); 
     }
+
+    let open_file = document.querySelectorAll(".open-file");
+    console.log(open_file)
+
+    for (let btnd of open_file) {
+
+        btnd.onclick = function() {
+            setCookie("id_doc", btnd.dataset.id)
+        }
+
+    }
     
 }

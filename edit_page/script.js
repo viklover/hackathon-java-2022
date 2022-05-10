@@ -1,6 +1,8 @@
 let xhr3 = new XMLHttpRequest();
 
-xhr3.open('POST', 'http://10.3.4.224:8080/', true);
+let address = 'http://10.3.4.224:8080/'
+
+xhr3.open('POST', address, true);
 
 let request_doc_data = {
     request: "get_document_by_id", id: getCookie("id_doc")
@@ -26,6 +28,12 @@ xhr3.onload = function() {
 
     name.append(h1)
 
+    let a = document.createElement('a');
+        a.href = `https://hackathon.it-college.ru/hack1/files/${responseDoc.document.path}`
+        a.innerHTML = `Открыть PDF`
+
+    name.append(a)
+
     document.getElementById("check").checked = responseDoc.document.checked
 
     let table_content = document.querySelector("tbody")
@@ -35,10 +43,12 @@ xhr3.onload = function() {
         let tr = document.createElement('tr')
             tr.innerHTML = `
             <tr>
-                <td><div class="one" data-id="${key}" >${doc_data[0]}</div></td>
-                <td><input type="text" name="field" style="text-align:center;" value="${(doc_data[1] != null ? doc_data[1] : "")}"></td>
+                <td class="firstcol"><div class="one" data-id="${key}" >${doc_data[0]}</div></td>
+                <td><input type="text" name="field" style="text-align:center;"></td>
             </tr>
             `
+        let input = tr.querySelector("input")
+        input.value = `${(doc_data[1] != null ? doc_data[1] : "")}`
         table_content.append(tr)
     }
 
@@ -52,7 +62,7 @@ xhr3.onload = function() {
 
             let xhr4 = new XMLHttpRequest();
         
-            xhr4.open('POST', 'http://10.3.4.224:8080/', true);
+            xhr4.open('POST', address, true);
         
             let table_content2 = document.querySelector("tbody")
             let data = {};
@@ -83,7 +93,7 @@ xhr3.onload = function() {
 
 let xhr5 = new XMLHttpRequest();
 
-xhr5.open('POST', 'http://10.3.4.224:8080/', true);
+xhr5.open('POST', address, true);
 
 let get_document_history = {
     request: "get_document_history", id: getCookie("id_doc")
@@ -97,16 +107,30 @@ xhr5.onload = function() {
 
     let verGrid = document.querySelector(".versions");
 
-    for (let ver of JSON.parse(responseHis).versions) {
-        let numVer = ver[0];
+    if (JSON.parse(responseHis).versions.length > 1) {
 
-        let hisItem = document.createElement('div')
-            hisItem.innerHTML = `
-            <div class="verBtn"> 
-                <a class="verBtnContent" href="#" data-id="${numVer}">Версия ${numVer}</a>
-            </div>
-            `
-        verGrid.append(hisItem)
+        for (let i = 0; i < JSON.parse(responseHis).versions.length; i++) {
+
+            let ver = JSON.parse(responseHis).versions[i];
+
+            let numVer = ver[0];
+
+            let hisItem = document.createElement('div')
+            if (i === JSON.parse(responseHis).versions.length - 1) {
+                hisItem.innerHTML = `
+                <div class="verBtn"> 
+                    <a class="verBtnContent" href="#" data-id="${numVer}">Текущая версия</a>
+                </div>
+                `
+            } else {
+                hisItem.innerHTML = `
+                <div class="verBtn"> 
+                    <a class="verBtnContent" href="#" data-id="${numVer}">Версия ${numVer}</a>
+                </div>
+                `
+            }
+            verGrid.append(hisItem)
+        }
     }
     let ver_btn = document.querySelectorAll(".verBtnContent")
     for (let vbtn of ver_btn) {

@@ -18,7 +18,6 @@ function page_init() {
     }
 
     let open_file = document.querySelectorAll(".open-file");
-    console.log(open_file)
 
     for (let btnd of open_file) {
 

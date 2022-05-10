@@ -1,6 +1,8 @@
 let xhr = new XMLHttpRequest();
 
-xhr.open('POST', 'http://10.3.4.224:8080/', true);
+let address = 'http://10.3.4.224:8080/'
+
+xhr.open('POST', address, true);
 
 let request_types = {
     request: "get_types_documents"
@@ -14,7 +16,9 @@ xhr.onload = function() {
 
     responseObj = JSON.parse(responseObj)
 
-    for (let type_config of responseObj.types) {
+    for (let i = 0; i < responseObj.types.length; i++) {
+
+        let type_config = responseObj.types[i]
 
         let type_name = type_config.name;
 
@@ -74,7 +78,7 @@ xhr.onload = function() {
 
         let xhr2 = new XMLHttpRequest();
 
-        xhr2.open('POST', 'http://10.3.4.224:8080/', true);
+        xhr2.open('POST', address, true);
 
         let request_docs = {
             request: "get_documents_by_type", 
@@ -100,7 +104,7 @@ xhr.onload = function() {
                 var date = new Date(doc_was_updated);
                 doc_was_updated = ('0' + date.getDate()).slice(-2) + '.' + ('0' + (date.getMonth() + 1)).slice(-2) + '.' + date.getFullYear() + ' ' + ('0' + date.getHours()).slice(-2) + ':' + ('0' + date.getMinutes()).slice(-2) + ':' + ('0' + date.getSeconds()).slice(-2);
 
-                let table = document.querySelectorAll("table")[document.querySelectorAll("table").length - 1];
+                let table = document.querySelectorAll("table")[i];
             
                 let elementTr = document.createElement('tr');
                 elementTr.innerHTML = `

@@ -7,9 +7,9 @@ Backend взял на себя автор этого текста (Воробь�
 -----------
 
 Программа написана на Java с использованием фреймвора Maven и имеет следующие зависимости:
-* `com.googlecode.json-simple` [`jsonsimple`] (1.1.1)
-* `mysql` [`mysql-connector-java`] (8.0.25)
-* `com.opencsv` [`opencsv`] (5.6)
+* `com.googlecode.json-simple` `jsonsimple` (1.1.1)
+* `mysql` `mysql-connector-java` (8.0.25)
+* `com.opencsv` `opencsv` (5.6)
 
 
 Описание всех классов

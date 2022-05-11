@@ -1,0 +1,8 @@
+{
+  "mysql" : {
+    "url" : "jdbc:mysql://mysql.students.it-college.ru:3306/team5?allowMultiQueries=true",
+    "user" : "team5",
+    "password" : "Rjvfylf5"
+  },
+  "resources_directory" : "src/main/resources/"
+}

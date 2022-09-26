@@ -1,6 +1,6 @@
 let xhr = new XMLHttpRequest();
 
-let address = 'http://10.3.4.224:8080/'
+let address = 'http://localhost:8080/'
 
 xhr.open('POST', address, true);
 

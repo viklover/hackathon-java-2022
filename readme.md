@@ -1,13 +1,6 @@
 Хакатон. Команда №5
 ==================
 
-Чтобы посмотреть наш проект как пользователь, вам нужно перейти по этой ссылке:
-http://hackathon.it-college.ru/hack1/Hack1T5/
-
-обратите внимание на протокол ссылки.
-
-Смотреть страницу желательно в Chrome, так как в Firefox на некоторых устройствах были обнаружены проблемы с обработкой ответов от сервера.
-
 User Guide
 ---
 Наш проект имеет backend и frontend.
@@ -24,11 +17,7 @@ Frontend работает как html-страница с ванильным JS.
 
 Команда состоит из:
 -------------------
-* [Воробьева Михаила][i21s585] (координатор, backend)
-* [Садовникова Артёма][i21s592] (frontend, backend)
-* Королькововой Анастасии (frontend)
-* [Панова Георгия][i21s597] (frontend)
-
-[i21s585]: https://web.it-college.ru/i21s585/
-[i21s592]: https://web.it-college.ru/i21s592/
-[i21s597]: https://web.it-college.ru/i21s597/
+* [Воробьева Михаила](https://github.com/viklover) (координатор, backend)
+* [Садовникова Артёма](https://github.com/Sh1zome) (frontend, backend)
+* [Королькововой Анастасии](https://github.com/AnastasiaKorolokova) (frontend)
+* [Панова Георгия](https://github.com/georgij1) (frontend)
